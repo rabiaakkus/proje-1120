@@ -1,0 +1,124 @@
+/* Genel stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container'ın Flexbox düzeni */
+.res-container {
+    display: flex;               /* Flexbox düzeni */
+    justify-content: center;     /* Yatayda ortalamak için */
+    align-items: center;         /* Dikeyde ortalamak için */
+    gap: 20px;                   /* Resimler arasında boşluk */
+    margin: 0 auto;              /* Container'ı ortalamak için */
+    flex-wrap: wrap;             /* Fazla öğeler alt satıra geçebilir */
+}
+
+/* Resimlerin kapsayıcılarının stilini ayarlayalım */
+.res1, .res2, .res3, .res4 {
+    width: 200px;                /* Her bir resmin genişliği */
+    height: auto;                /* Oranları koruyarak yüksekliği otomatik yap */
+    display: flex;
+    justify-content: center;     /* İçeriği yatayda ortalamak */
+    align-items: center;         /* İçeriği dikeyde ortalamak */
+}
+
+/* Resimlerin boyutları */
+.res1 img, .res2 img, .res3 img, .res4 img {
+    width: 100%;                 /* Resimler div'in genişliğine göre boyutlanacak */
+    height: auto;                /* Yükseklik otomatik olacak */
+    display: block;              /* Resimler satırda düzgün görünsün */
+}
+
+
+body {
+    background-image: url(../img/fresh-spring-background.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-color: #807577;
+}
+
+
+
+
+
+
+
+
+/* Container ve genel stil */
+.container {
+    margin: auto;
+    width: 70%;
+}
+
+/* Logo stili */
+#logo img {
+    width: 150px;
+}
+
+/* Menü stil */
+#menu {
+    background-color: rgb(235, 232, 227);
+    box-shadow: 0 0 5px #95a5a6;
+    text-align: center;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu a {
+    display: inline-block;
+    padding: 10px 80px;
+    text-decoration: none;
+    color: rgb(235, 105, 105);
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: 1s;
+}
+
+#menu a:hover {
+    background-color: rgb(190, 103, 103);
+    color: aliceblue;
+    transition: 1s;
+}
+
+
+
+/* Container'ın net bir şekilde hizalanması için */
+.res-container::after {
+    content: "";
+    clear: both;      /* Float'lı elemanların hizalanmasını sağlar */
+    display: table;   /* İleriye dönük uyumlu bir görünüm sağlar */
+}
+
+
+
+
+
+/* Ana içerik */
+main {
+    margin-top: 20px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #ffffff63;
+    padding: 5px;
+    font-size: small;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px #33120f;
+}
+
+.sag {
+    color: #f88120;
+}
+
+.sol {
+    color: #d35722;
+}
